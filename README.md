@@ -1,5 +1,5 @@
 # balena-nuc-geti
-Experimental Geti nferencing deployed to a NUC/x86 via balena
+Experimental Geti inferencing deployed to a NUC/x86 via balena
 
 ## Description
 [Intel Geti](https://geti.intel.com/) is Intel’s new software platform for quickly building computer vision models. In this example project, we use the [balena platform](www.balena.io) to deploy a Geti model to an x86 device, where it instantly begins running inferences on a connected camera or RTSP stream. Optionally, you can connect an LED to the device which will illuminate when the selected object is detected by the camera.
@@ -18,6 +18,8 @@ To use the LED feature, you'll need:
 - One 220 ohm [resistor](https://www.adafruit.com/product/2780) (+/- 100 ohms is fine)
 - A small breadboard and some wire such as [this](https://www.amazon.com/eBoot-400-Point-Solderless-Breadboard-Flexible/dp/B071D7V9HD/) - or you can use a PCB/perfboard if you're comfortable soldering
 
+Set up the breadboard or circuit as shown in the layout diagram on [this page](https://learn.adafruit.com/circuitpython-on-any-computer-with-ft232h/gpio).
+
 ## Setup
 Set up your balena account, login, and then use the button below to create your fleet (of one or more devices) and deploy the code:
 
@@ -33,5 +35,10 @@ If you have connected and wired the LED assembly, you can select the inference l
 
 The LED will stay on for three seconds after a detection and then turn off. To extend that time, set `LED_LAG_TIME` to an integer value for the number of seconds to remain on. Set the value to `0` to have it remain on indefinitely after a detection.
 
-## Takeaways
-TBA
+## Some takeaways
+
+- This is an easy way to deploy Geti models to x86 devices
+
+- A good example of how to perform IoT actions on certain object detections
+
+- Ease of remotely re-configuring the device using variables on the web dashboard
