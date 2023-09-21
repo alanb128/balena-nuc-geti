@@ -1,0 +1,18 @@
+version: '2'
+
+volumes:
+  models:
+  detection:
+
+services:
+
+  detection:
+    build: detection
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - "detection:/usr/src/data"
+
+
+
+    

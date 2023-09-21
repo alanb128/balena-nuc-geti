@@ -1,0 +1,25 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%-ubuntu-python:3.8-focal-run
+
+WORKDIR /usr/src/app
+
+ENV DEBIAN_FRONTEND noninteractive
+
+ENV UDEV=on
+
+RUN apt update && apt install -y build-essential git ffmpeg libsm6 libxext6
+
+RUN apt-get update && apt-get install -y libusb-1.0
+
+RUN pip install wheel
+
+COPY . .
+
+COPY 11-ftdi.rules /etc/udev/rules.d/11-ftdi.rules
+
+RUN pip install -r requirements.txt
+
+#ENV PYTHONPATH=$PYTHONPATH:/usr/src/app/model_wrappers
+
+ENV BLINKA_FT232H=1
+
+CMD [ "bash", "start.sh" ]

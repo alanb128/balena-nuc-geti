@@ -1,0 +1,67 @@
+{
+   "id": "6483613d18fb8c1c529cb05a",
+   "name": "birds",
+   "creation_time": "2023-06-09T17:28:29.944000+00:00",
+   "creator_id": "admin@home.com",
+   "pipeline": {
+      "tasks": [
+         {
+            "id": "6483613d18fb8c1c529cb05b",
+            "title": "Dataset",
+            "task_type": "dataset"
+         },
+         {
+            "id": "6483613d18fb8c1c529cb05e",
+            "title": "Detection task",
+            "task_type": "detection",
+            "labels": [
+               {
+                  "id": "6483613d18fb8c1c529cb061",
+                  "name": "bird",
+                  "is_anomalous": false,
+                  "color": "#ff0000ff",
+                  "hotkey": "",
+                  "is_empty": false,
+                  "group": "Default group",
+                  "parent_id": null
+               },
+               {
+                  "id": "6483613d18fb8c1c529cb065",
+                  "name": "No Object",
+                  "is_anomalous": false,
+                  "color": "#000000ff",
+                  "hotkey": "",
+                  "is_empty": true,
+                  "group": "No Object",
+                  "parent_id": null
+               }
+            ],
+            "label_schema_id": "6483613d18fb8c1c529cb067"
+         }
+      ],
+      "connections": [
+         {
+            "from": "6483613d18fb8c1c529cb05b",
+            "to": "6483613d18fb8c1c529cb05e"
+         }
+      ]
+   },
+   "datasets": [
+      {
+         "id": "6483613d18fb8c1c529cb062",
+         "name": "Dataset",
+         "use_for_training": true,
+         "creation_time": "2023-06-09T17:28:29.944000+00:00"
+      },
+      {
+         "id": "6483613e18fb8c1c529cb068",
+         "name": "Testing set 1",
+         "use_for_training": false,
+         "creation_time": "2023-06-09T17:28:30.055000+00:00"
+      }
+   ],
+   "thumbnail": "/api/v1/workspaces/6487656fb7efbf83c9b9ec35/projects/6483613d18fb8c1c529cb05a/thumbnail",
+   "performance": {
+      "score": 0.939078751857355
+   }
+}
