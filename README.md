@@ -6,6 +6,10 @@ Experimental Geti inferencing deployed to a NUC/x86 via balena
 
 The balena platform streamlines provisioning, updating and managing fleets of devices. We will use the device variables feature to change the configuration of the Geti model inferencing on-the-fly.
 
+Once this project is running on the device, you can see the continuous inferencing output in the log window:
+
+![Detection logging](https://raw.githubusercontent.com/alanb128/balena-nuc-geti/main/log-output.png)
+
 ## Requirements
 You'll need an x86 device, a [balena account](https://dashboard.balena-cloud.com/signup) - free for up to 10 devices, and a USB drive/key to flash the device, along with flashing software such as [balenaEtcher](https://etcher.balena.io/).
 
@@ -17,6 +21,8 @@ To use the LED feature, you'll need:
 - One LED - any color, such as [this](https://www.adafruit.com/product/298)
 - One 220 ohm [resistor](https://www.adafruit.com/product/2780) (+/- 100 ohms is fine)
 - A small breadboard and some wire such as [this](https://www.amazon.com/eBoot-400-Point-Solderless-Breadboard-Flexible/dp/B071D7V9HD/) - or you can use a PCB/perfboard if you're comfortable soldering
+
+![LED breadboard](https://raw.githubusercontent.com/alanb128/balena-nuc-geti/main/LED-breadboard.jpg)
 
 Set up the breadboard or circuit as shown in the layout diagram on [this page](https://learn.adafruit.com/circuitpython-on-any-computer-with-ft232h/gpio).
 
